@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png">
 <meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png">
 <meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png">
-<meta property="og:updated_time" content="2018-11-09T16:49:13.492Z">
+<meta property="og:updated_time" content="2018-11-09T16:51:03.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTPSendRequest失败返回12029的一个解决方案">
 <meta name="twitter:description" content="解决方案&amp;emsp;&amp;emsp;Internet选项中按需求勾选TLS对应版本。">
@@ -285,8 +285,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>&emsp;&emsp;Internet选项中按需求勾选TLS对应版本。<br><a id="more"></a></p>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>&emsp;&emsp;使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"><br><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"><br><br>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>使用 TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
+        <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>&emsp;&emsp;Internet选项中按需求勾选TLS对应版本。<a id="more"></a></p>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>&emsp;&emsp;使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"></p>
+<p><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"></p>
+<p>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>使用 TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
 
       
     </div>
@@ -298,7 +300,7 @@
         <p><span>本文标题:</span><a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
         <p><span>发布时间:</span>2018年11月09日 - 08时52分</p>
-        <p><span>最后更新:</span>2018年11月10日 - 00时49分</p>
+        <p><span>最后更新:</span>2018年11月10日 - 00时51分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" title="HTTPSendRequest失败返回12029的一个解决方案">https://lfeng1420.github.io/blog/2018/One-way-to-resolve-HTTP-send-request-return-12029.html</a>
             <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/One-way-to-resolve-HTTP-send-request-return-12029.html　　作者: lfeng" title=""></span>
