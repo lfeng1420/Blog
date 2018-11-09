@@ -793,12 +793,12 @@ int main()　　
 <p>图片测试：<br><img src="../images/2015/New-beginning/Visual Studio.png" alt="Visual Studio"></p>
 ]]></content>
       
-        <categories>
-            
-            <category> Test </category>
-            
-        </categories>
         
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
         
     </entry>
     
