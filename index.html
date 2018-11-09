@@ -270,9 +270,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>#解决方案<br>&emsp;&emsp;Internet选项中按需求开启TLS对应版本。</p>
-<p>#实例<br>使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"><br>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
-
+              <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>&emsp;&emsp;Internet选项中按需求勾选TLS对应版本。
+          
       
     </div>
     
@@ -285,6 +284,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wininet/">Wininet</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a   href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
