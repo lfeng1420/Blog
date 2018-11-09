@@ -4,20 +4,27 @@
   <meta charset="utf-8">
   <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
   
-   
-    <meta name="keywords" content="Game-AI" />
   
   
   
-  <title>Tag: Game-AI | lfeng</title>
+  <title>HTTPSendRequest失败返回12029的一个解决方案 | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lfeng">
-<meta property="og:url" content="https://lfeng1420.github.io/blog/tags/Game-AI/index.html">
+  <meta name="description" content="#解决方案&amp;emsp;&amp;emsp;Internet选项中按需求开启TLS对应版本。 #实例使用Postman发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，GetLastError返回12029。使用Fiddler抓包查看两次请求的内容如下：&amp;emsp;&amp;emsp;对比发现两次请求的Version不一致，也就是TLS版本不对应，勾选TLS 1.2版本之后便">
+<meta name="keywords" content="Wininet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTPSendRequest失败返回12029的一个解决方案">
+<meta property="og:url" content="https://lfeng1420.github.io/blog/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">
 <meta property="og:site_name" content="lfeng">
+<meta property="og:description" content="#解决方案&amp;emsp;&amp;emsp;Internet选项中按需求开启TLS对应版本。 #实例使用Postman发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，GetLastError返回12029。使用Fiddler抓包查看两次请求的内容如下：&amp;emsp;&amp;emsp;对比发现两次请求的Version不一致，也就是TLS版本不对应，勾选TLS 1.2版本之后便">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png">
+<meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png">
+<meta property="og:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png">
+<meta property="og:updated_time" content="2018-11-09T16:43:22.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lfeng">
+<meta name="twitter:title" content="HTTPSendRequest失败返回12029的一个解决方案">
+<meta name="twitter:description" content="#解决方案&amp;emsp;&amp;emsp;Internet选项中按需求开启TLS对应版本。 #实例使用Postman发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，GetLastError返回12029。使用Fiddler抓包查看两次请求的内容如下：&amp;emsp;&amp;emsp;对比发现两次请求的Version不一致，也就是TLS版本不对应，勾选TLS 1.2版本之后便">
+<meta name="twitter:image" content="https://lfeng1420.github.io/blog/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -40,9 +47,9 @@
           fancybox: true,
           animate: false,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
-          isTag: true,
+          isTag: false,
           isCategory: false,
           open_in_new: true
       }
@@ -238,60 +245,175 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-One-way-to-resolve-HTTP-send-request-return-12029" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a  href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2018/Simple-introduction-of-behaviac.html" class="archive-article-date">
-      <time datetime="2018-03-22T13:28:15.000Z" itemprop="datePublished">03-22</time>
+    <div class="article-meta">
+      <a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" class="article-date">
+      <time datetime="2018-11-09T00:52:36.000Z" itemprop="datePublished">2018-11-09</time>
 </a>
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTTPSendRequest失败返回12029的一个解决方案
     </h1>
   
 
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/behaviac/">behaviac</a>
-    </div>
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-
-          
+        
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FSM/">FSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Game-AI/">Game-AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/behaviac/">behaviac</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wininet/">Wininet</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#解决方案<br>&emsp;&emsp;Internet选项中按需求开启TLS对应版本。</p>
+<p>#实例<br>使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"><br>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
+        <p><span>发布时间:</span>2018年11月09日 - 08时52分</p>
+        <p><span>最后更新:</span>2018年11月10日 - 00时43分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" title="HTTPSendRequest失败返回12029的一个解决方案">https://lfeng1420.github.io/blog/2018/One-way-to-resolve-HTTP-send-request-return-12029.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/One-way-to-resolve-HTTP-send-request-return-12029.html　　作者: lfeng" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu环境下创建和使用动态库</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
 
     
 
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html" title="下一篇: Ubuntu环境下创建和使用动态库">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
@@ -360,18 +482,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

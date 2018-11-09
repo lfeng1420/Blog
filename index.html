@@ -180,7 +180,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Cocos2dx/" style="font-size: 15px;">Cocos2dx</a> <a href="/tags/FSM/" style="font-size: 10px;">FSM</a> <a href="/tags/Game-AI/" style="font-size: 10px;">Game-AI</a> <a href="/tags/Trigger/" style="font-size: 20px;">Trigger</a> <a href="/tags/VS2015/" style="font-size: 10px;">VS2015</a> <a href="/tags/behaviac/" style="font-size: 10px;">behaviac</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/windbg/" style="font-size: 10px;">windbg</a>
+                        <a href="/tags/Cocos2dx/" style="font-size: 15px;">Cocos2dx</a> <a href="/tags/FSM/" style="font-size: 10px;">FSM</a> <a href="/tags/Game-AI/" style="font-size: 10px;">Game-AI</a> <a href="/tags/Trigger/" style="font-size: 20px;">Trigger</a> <a href="/tags/VS2015/" style="font-size: 10px;">VS2015</a> <a href="/tags/Wininet/" style="font-size: 10px;">Wininet</a> <a href="/tags/behaviac/" style="font-size: 10px;">behaviac</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/windbg/" style="font-size: 10px;">windbg</a>
                     </div>
                 </section>
                 
@@ -240,6 +240,69 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-One-way-to-resolve-HTTP-send-request-return-12029" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" class="article-date">
+      <time datetime="2018-11-09T00:52:36.000Z" itemprop="datePublished">2018-11-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#解决方案<br>&emsp;&emsp;Internet选项中按需求开启TLS对应版本。</p>
+<p>#实例<br>使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"><br>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wininet/">Wininet</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-Create-and-use-dynamic-library-in-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -874,72 +937,10 @@
 
 
   
-    <article id="post-New-beginning" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a  href="/2015/New-beginning.html" class="article-date">
-      <time datetime="2015-11-08T02:55:17.000Z" itemprop="datePublished">2015-11-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/New-beginning.html">新的开始</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试测试测试测试测试测试测试测试测试测试测试测试
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2015/New-beginning.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 </div>
