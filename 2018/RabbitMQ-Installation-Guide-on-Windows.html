@@ -7,19 +7,19 @@
   
   
   
-  <title>RabbitMQ-Installation-Guide | lfeng</title>
+  <title>Windows下安装RabbitMQ | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1   安装PHP、Composer、Erlang、RabbitMQ">
 <meta name="keywords" content="RabbitMQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RabbitMQ-Installation-Guide">
-<meta property="og:url" content="https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide.html">
+<meta property="og:title" content="Windows下安装RabbitMQ">
+<meta property="og:url" content="https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide-on-Windows.html">
 <meta property="og:site_name" content="lfeng">
 <meta property="og:description" content="1   安装PHP、Composer、Erlang、RabbitMQ">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T01:52:31.210Z">
+<meta property="og:updated_time" content="2018-11-10T01:58:29.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RabbitMQ-Installation-Guide">
+<meta name="twitter:title" content="Windows下安装RabbitMQ">
 <meta name="twitter:description" content="1   安装PHP、Composer、Erlang、RabbitMQ">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
@@ -241,10 +241,10 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-RabbitMQ-Installation-Guide" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-RabbitMQ-Installation-Guide-on-Windows" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/RabbitMQ-Installation-Guide.html" class="article-date">
+      <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" class="article-date">
       <time datetime="2018-11-10T01:29:57.000Z" itemprop="datePublished">2018-11-10</time>
 </a>
 
@@ -259,7 +259,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      RabbitMQ-Installation-Guide
+      Windows下安装RabbitMQ
     </h1>
   
 
@@ -284,16 +284,12 @@
         <p>1   安装<code>PHP</code>、<code>Composer</code>、<code>Erlang</code>、<code>RabbitMQ</code><a id="more"></a></p>
 <p>2   配置环境变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERLANG_HOME			D:\Program\erl10.0.1</span><br><span class="line">RABBITMQ_SERVER		D:\Program\RabbitMQ Server\rabbitmq_server-3.7.7</span><br><span class="line">PATH				;%ERLANG_HOME%\bin;%RABBITMQ_SERVER%\sbin;</span><br></pre></td></tr></table></figure>
-<p>3   先执行以下命令开启<code>RabbitMQ</code>管理后台，执行完毕后访问<code>127.0.0.1:15672</code>，用户名/密码：<code>guest/guest</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins.bat <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure>
-<p>4   修改<code>composer</code>镜像地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure>
-<p>5   指定一个项目目录，在目录下新建<code>composer.json</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="string">"require"</span>: &#123; <span class="string">"php-amqplib/php-amqplib"</span>: <span class="string">"2.7.*"</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>3   先执行以下命令开启<code>RabbitMQ</code>管理后台，执行完毕后访问<code>127.0.0.1:15672</code>，用户名/密码：<code>guest/guest</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins.bat <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure></p>
+<p>4   修改<code>composer</code>镜像地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure></p>
+<p>5   指定一个项目目录，在目录下新建<code>composer.json</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="string">"require"</span>: &#123; <span class="string">"php-amqplib/php-amqplib"</span>: <span class="string">"2.7.*"</span> &#125; &#125;</span><br></pre></td></tr></table></figure></p>
 <p>6   在项目目录下执行<code>composer install</code></p>
 <p>7   拷贝<code>.\vendor\php-amqplib\php-amqplib\demo</code>文件夹到项目根目录</p>
-<p>8   官方demo测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">消费者：</span><br><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_consumer.php</span><br></pre></td></tr></table></figure>
+<p>8   官方demo测试<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">消费者：</span><br><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_consumer.php</span><br></pre></td></tr></table></figure></p>
 <p>发布者：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_publisher.php some text to publish</span><br></pre></td></tr></table></figure></p>
 <p>9   <code>sender.php/receiver.php</code>测试</p>
 
@@ -304,13 +300,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/RabbitMQ-Installation-Guide.html">RabbitMQ-Installation-Guide</a></p>
+        <p><span>本文标题:</span><a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
         <p><span>发布时间:</span>2018年11月10日 - 09时29分</p>
-        <p><span>最后更新:</span>2018年11月10日 - 09时52分</p>
+        <p><span>最后更新:</span>2018年11月10日 - 09时58分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/RabbitMQ-Installation-Guide.html" title="RabbitMQ-Installation-Guide">https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide.html</a>
-            <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide.html　　作者: lfeng" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" title="Windows下安装RabbitMQ">https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide-on-Windows.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide-on-Windows.html　　作者: lfeng" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -393,7 +389,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/RabbitMQ-Installation-Guide.html">RabbitMQ-Installation-Guide</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
