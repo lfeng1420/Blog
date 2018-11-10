@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="lfeng">
 <meta property="og:description" content="1   安装PHP、Composer、Erlang、RabbitMQ">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T01:58:29.888Z">
+<meta property="og:updated_time" content="2018-11-10T15:11:30.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下安装RabbitMQ">
 <meta name="twitter:description" content="1   安装PHP、Composer、Erlang、RabbitMQ">
@@ -283,13 +283,13 @@
           
         <p>1   安装<code>PHP</code>、<code>Composer</code>、<code>Erlang</code>、<code>RabbitMQ</code><a id="more"></a></p>
 <p>2   配置环境变量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERLANG_HOME			D:\Program\erl10.0.1</span><br><span class="line">RABBITMQ_SERVER		D:\Program\RabbitMQ Server\rabbitmq_server-3.7.7</span><br><span class="line">PATH				;%ERLANG_HOME%\bin;%RABBITMQ_SERVER%\sbin;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERLANG_HOME			D:\Program\erl10.0.1</span><br><span class="line">RABBITMQ_SERVER			D:\Program\RabbitMQ Server\rabbitmq_server-3.7.7</span><br><span class="line">PATH				;%ERLANG_HOME%\bin;%RABBITMQ_SERVER%\sbin;</span><br></pre></td></tr></table></figure>
 <p>3   先执行以下命令开启<code>RabbitMQ</code>管理后台，执行完毕后访问<code>127.0.0.1:15672</code>，用户名/密码：<code>guest/guest</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins.bat <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure></p>
 <p>4   修改<code>composer</code>镜像地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure></p>
 <p>5   指定一个项目目录，在目录下新建<code>composer.json</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="string">"require"</span>: &#123; <span class="string">"php-amqplib/php-amqplib"</span>: <span class="string">"2.7.*"</span> &#125; &#125;</span><br></pre></td></tr></table></figure></p>
 <p>6   在项目目录下执行<code>composer install</code></p>
 <p>7   拷贝<code>.\vendor\php-amqplib\php-amqplib\demo</code>文件夹到项目根目录</p>
-<p>8   官方demo测试<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">消费者：</span><br><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_consumer.php</span><br></pre></td></tr></table></figure></p>
+<p>8   官方demo测试<br>消费者：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_consumer.php</span><br></pre></td></tr></table></figure></p>
 <p>发布者：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> php-amqplib/demo</span><br><span class="line">$ php amqp_publisher.php some text to publish</span><br></pre></td></tr></table></figure></p>
 <p>9   <code>sender.php/receiver.php</code>测试</p>
 
@@ -303,7 +303,7 @@
         <p><span>本文标题:</span><a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
         <p><span>发布时间:</span>2018年11月10日 - 09时29分</p>
-        <p><span>最后更新:</span>2018年11月10日 - 09时58分</p>
+        <p><span>最后更新:</span>2018年11月10日 - 23时11分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" title="Windows下安装RabbitMQ">https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide-on-Windows.html</a>
             <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/RabbitMQ-Installation-Guide-on-Windows.html　　作者: lfeng" title=""></span>
