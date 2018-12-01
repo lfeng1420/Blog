@@ -9,13 +9,17 @@
   
   <title>lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="��װ������MySQLUbuntu1sudo apt-get install mysql-server mysql-client �༭�����ļ��� 12sudo chmod 777 /etc/mysql/mysql.conf.d/mysqld.cnfgedit /etc/mysql/mysql.conf.d/mysqld.cnf bind-address�޸�Ϊ0.0.0.0�� 12">
+<meta property="og:type" content="article">
 <meta property="og:title" content="lfeng">
-<meta property="og:url" content="https://lfeng1420.github.io/blog/index.html">
+<meta property="og:url" content="https://lfeng1420.github.io/blog/2018/MySQL-master-slave-configuration.html">
 <meta property="og:site_name" content="lfeng">
+<meta property="og:description" content="��װ������MySQLUbuntu1sudo apt-get install mysql-server mysql-client �༭�����ļ��� 12sudo chmod 777 /etc/mysql/mysql.conf.d/mysqld.cnfgedit /etc/mysql/mysql.conf.d/mysqld.cnf bind-address�޸�Ϊ0.0.0.0�� 12">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-30T15:57:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lfeng">
+<meta name="twitter:description" content="��װ������MySQLUbuntu1sudo apt-get install mysql-server mysql-client �༭�����ļ��� 12sudo chmod 777 /etc/mysql/mysql.conf.d/mysqld.cnfgedit /etc/mysql/mysql.conf.d/mysqld.cnf bind-address�޸�Ϊ0.0.0.0�� 12">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -27,9 +31,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -40,8 +41,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: false,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -239,9 +240,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-MySQL-master-slave-configuration" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-MySQL-master-slave-configuration" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a  href="/2018/MySQL-master-slave-configuration.html" class="article-date">
@@ -296,658 +295,129 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-RabbitMQ-Installation-Guide-on-Windows" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" class="article-date">
-      <time datetime="2018-11-10T01:29:57.000Z" itemprop="datePublished">2018-11-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>1   安装<code>PHP</code>、<code>Composer</code>、<code>Erlang</code>、<code>RabbitMQ</code>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RabbitMQ/">RabbitMQ</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/RabbitMQ-Installation-Guide-on-Windows.html#more">查看更多 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/MySQL-master-slave-configuration.html"></a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
+        <p><span>发布时间:</span>2018年12月01日 - 09时52分</p>
+        <p><span>最后更新:</span>2018年11月30日 - 23时57分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/MySQL-master-slave-configuration.html" title="">https://lfeng1420.github.io/blog/2018/MySQL-master-slave-configuration.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://lfeng1420.github.io/blog/2018/MySQL-master-slave-configuration.html　　作者: lfeng" title=""></span>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-One-way-to-resolve-HTTP-send-request-return-12029" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" class="article-date">
-      <time datetime="2018-11-09T00:52:36.000Z" itemprop="datePublished">2018-11-09</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>&emsp;&emsp;Internet选项中按需求勾选TLS对应版本。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wininet/">Wininet</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html#more">查看更多 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Windows下安装RabbitMQ</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#��װ������MySQL"><span class="toc-number">1.</span> <span class="toc-text">��װ������MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu"><span class="toc-number">1.1.</span> <span class="toc-text">Ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-number">1.2.</span> <span class="toc-text">Windows</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��������"><span class="toc-number">2.</span> <span class="toc-text">��������</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��������Զ������"><span class="toc-number">3.</span> <span class="toc-text">��������Զ������</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#���ӿ���E"><span class="toc-number">4.</span> <span class="toc-text">���ӿ���Ȩ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��ȡ����״̬"><span class="toc-number">5.</span> <span class="toc-text">��ȡ����״̬</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ͬ������"><span class="toc-number">6.</span> <span class="toc-text">ͬ������</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#�ӿ�����"><span class="toc-number">7.</span> <span class="toc-text">�ӿ�����</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��֤"><span class="toc-number">8.</span> <span class="toc-text">��֤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#������"><span class="toc-number">9.</span> <span class="toc-text">������</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
 
 
-
-
-
-
-  
-    <article id="post-Create-and-use-dynamic-library-in-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html" class="article-date">
-      <time datetime="2018-07-07T17:18:13.000Z" itemprop="datePublished">2018-07-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="安装java"><a href="#安装java" class="headerlink" title="安装java"></a>安装<code>java</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br><span class="line">sudo apt-get install oracle-java8-set-default</span><br></pre></td></tr></table></figure>
-<h2 id="安装eclipse"><a href="#安装eclipse" class="headerlink" title="安装eclipse"></a>安装<code>eclipse</code></h2><p>&emsp;&emsp;从<code>eclipse</code>官网下载<code>Eclipse IDE for C/C++ Developers</code>（<a href="http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/photon/R/eclipse-cpp-photon-R-linux-gtk-x86_64.tar.gz" target="_blank" rel="noopener"><strong>下载链接</strong></a>），解压到自定义目录，要启动<code>eclipse</code>，双击自定义目录下的<code>eclipse</code>可执行文件即可。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eclipse/">eclipse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Add-protobuf-lite-for-cocos2dx" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Add-protobuf-lite-for-cocos2dx.html" class="article-date">
-      <time datetime="2018-06-16T13:46:54.000Z" itemprop="datePublished">2018-06-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
-<li>Cocos2dx 3.x以上版本（以3.4版本为例）</li>
-<li>protobuf 2.6.1（<a href="https://github.com/google/protobuf/releases/tag/v2.6.1" target="_blank" rel="noopener"><strong>release页</strong></a>）
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Cocos2dx/">Cocos2dx</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cocos2dx/">Cocos2dx</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Add-protobuf-lite-for-cocos2dx.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Analyze-CLR-application-dump-with-windbg" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Analyze-CLR-application-dump-with-windbg.html" class="article-date">
-      <time datetime="2018-03-30T15:27:15.000Z" itemprop="datePublished">2018-03-30</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>&emsp; &emsp;分析dump之前，需要先从微软符号服务器下载分析所需的pdb。打开Windbg，选择<code>File-&gt;Symbol File Path</code>，在弹出的符号路径设置窗口中输入以下内容并点击<code>OK</code>，也可以使用<code>.sympath+</code>命令（需要先打开dump）：
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/windbg/">windbg</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windbg/">windbg</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Analyze-CLR-application-dump-with-windbg.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Build-personal-blog-with-github-and-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Build-personal-blog-with-github-and-hexo.html" class="article-date">
-      <time datetime="2018-03-25T15:35:39.000Z" itemprop="datePublished">2018-03-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" title="下一篇: Windows下安装RabbitMQ">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Build-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果希望阅读简洁的版本，请前往hexo官方查阅文档，戳<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener"><strong>这里</strong></a>
-          
-      
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/MySQL-master-slave-configuration.html">MySQL-master-slave-configuration</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/github/">github</a>
-    </div>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Build-personal-blog-with-github-and-hexo.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-Simple-introduction-of-behaviac" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Simple-introduction-of-behaviac.html" class="article-date">
-      <time datetime="2018-03-22T13:28:15.000Z" itemprop="datePublished">2018-03-22</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <script>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>&emsp;&emsp;behaviac是游戏AI的开发框架组件，也是游戏原型的快速设计工具，支持全平台，适用于客户端和服务器，详细可查看： <a href="http://www.behaviac.com/language/zh/overview/" target="_blank" rel="noopener"><strong>behaviac概述</strong></a><br>&emsp;&emsp;exe安装包下载地址： <a href="https://github.com/Tencent/behaviac/releases/download/3.6.39/BehaviacSetup_3.6.39.exe" target="_blank" rel="noopener"><strong>3.6.39版</strong></a><br>&emsp;&emsp;behaviac项目源代码： <a href="https://github.com/Tencent/behaviac/archive/3.6.39.zip" target="_blank" rel="noopener"><strong>3.6.39版</strong></a><br>&emsp;&emsp;以下内容中大部分来自behaviac官方文档，详细可查看： <a href="http://www.behaviac.com/language/zh/category/%E6%96%87%E6%A1%A3/" target="_blank" rel="noopener"><strong>文档页面</strong></a><br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/behaviac/">behaviac</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FSM/">FSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Game-AI/">Game-AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/behaviac/">behaviac</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Simple-introduction-of-behaviac.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Build-cocos2dx-3_2-project-with-VS2015" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html" class="article-date">
-      <time datetime="2018-01-21T07:08:27.000Z" itemprop="datePublished">2018-01-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>&emsp;&emsp;cocos2dx3.2应该算是大家比较熟知的一个版本了，相比后续的版本，这个版本生成的apk比较小，重点是支持WP8（软粉一枚(ง •_•)ง），然而这个版本生成的项目在VS2015上编译不过。接下来介绍如何修改使VS2015能够顺利编译项目。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Cocos2dx/">Cocos2dx</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cocos2dx/">Cocos2dx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS2015/">VS2015</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Build-cocos2dx-3_2-project-with-VS2015.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TS3-create-read-write-data-with-json" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2015/TS3-create-read-write-data-with-json.html" class="article-date">
-      <time datetime="2015-11-22T15:02:59.000Z" itemprop="datePublished">2015-11-22</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>&#160; &#160; &#160; &#160;上一篇其实已经说完了这个游戏里的重要部分了，所以接下来开始写代码了。先从解析json文件开始，配置环境啥的就不写了，网上一搜大把的教程（感觉这部分其实都不用写，也有类似读取json文件的教程= =）
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2015/TS3-create-read-write-data-with-json.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+    </script>
 
 </div>
       <footer id="footer">
