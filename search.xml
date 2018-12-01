@@ -5,8 +5,8 @@
     <entry>
       <title><![CDATA[MySQL主从库配置]]></title>
       <url>/2018/Set-up-Master-Slave-Replication-in-MySQL.html</url>
-      <content type="html"><![CDATA[<a id="more"></a>
-<h1 id="安装及配置MySQL"><a href="#安装及配置MySQL" class="headerlink" title="安装及配置MySQL"></a>安装及配置MySQL</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<h1 id="安装及配置MySQL"><a href="#安装及配置MySQL" class="headerlink" title="安装及配置MySQL"></a>安装及配置MySQL</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>编辑配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 /etc/mysql/mysql.conf.d/mysqld.cnf</span><br><span class="line">gedit /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 <p>bind-address修改为<code>0.0.0.0</code>：</p>
