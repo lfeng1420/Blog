@@ -3,6 +3,52 @@
   
     
     <entry>
+      <title><![CDATA[SVN递归将文件名改为小写]]></title>
+      <url>/2019/SVN-change-filename-to-lowercase-recursively-in-Windows.html</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;由于用到了svn命令，执行之前请自行确认是否已添加svn环境变量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">CALL :RenameFile %CD%</span><br><span class="line">GOTO:EOF</span><br><span class="line"></span><br><span class="line">:RenameFile</span><br><span class="line">CD %1</span><br><span class="line"><span class="keyword">for</span> /f %%a <span class="keyword">in</span> (<span class="string">'dir /a-d /b /l'</span>) <span class="keyword">do</span> (</span><br><span class="line">	svn rename %%a %%a</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> /f %%a <span class="keyword">in</span> (<span class="string">'dir /ad /b /l'</span>) <span class="keyword">do</span> (</span><br><span class="line">	CALL :RenameFile %%a</span><br><span class="line">	CD %CD%</span><br><span class="line">	svn rename %%a %%a</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> svn </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> svn </tag>
+            
+            <tag> cmd </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/2019/ReanameTool-User-Manual.html</url>
+      <content type="html"><![CDATA[<h1 id="重命名使用手册"><a href="#重命名使用手册" class="headerlink" title="重命名使用手册"></a>重命名使用手册</h1><h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><ul>
+<li>批量重命名文件</li>
+<li>重命名规则文件（.rule）管理</li>
+</ul>
+<h2 id="界面说明"><a href="#界面说明" class="headerlink" title="界面说明"></a>界面说明</h2><h3 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h3><p><img src="../images/2018/RenameTool-User-Manual/0.png" alt=""></p>
+<h3 id="规则文件"><a href="#规则文件" class="headerlink" title="规则文件"></a>规则文件</h3><p><img src="../images/2018/RenameTool-User-Manual/1.png" alt=""></p>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p><img src="../images/2018/RenameTool-User-Manual/2.png" alt=""></p>
+<h2 id="规则列表"><a href="#规则列表" class="headerlink" title="规则列表"></a>规则列表</h2><ul>
+<li>删除规则</li>
+<li>替换规则</li>
+<li>填充规则</li>
+<li>排序规则</li>
+<li>序列化规则</li>
+</ul>
+<h2 id="规则介绍"><a href="#规则介绍" class="headerlink" title="规则介绍"></a>规则介绍</h2><h3 id="删除规则"><a href="#删除规则" class="headerlink" title="删除规则"></a>删除规则</h3>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[MySQL Master/Slave同步配置]]></title>
       <url>/2018/Set-up-Master-Slave-Replication-in-MySQL.html</url>
       <content type="html"><![CDATA[<h1 id="安装及配置MySQL"><a href="#安装及配置MySQL" class="headerlink" title="安装及配置MySQL"></a>安装及配置MySQL</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
