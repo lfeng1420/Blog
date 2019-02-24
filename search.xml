@@ -889,6 +889,31 @@
     </entry>
     
     <entry>
+      <title><![CDATA[新的开始]]></title>
+      <url>/2015/New-beginning.html</url>
+      <content type="html"><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试测试测试测试测试测试测试测试测试测试测试测试<a id="more"></a></p>
+<p>代码测试：</p>
+<pre><code class="bash"><span class="comment">#include &lt;iostream&gt;</span>
+using namespace std;　　
+int main()　　
+{　　
+    cout &lt;&lt; <span class="string">"hello world!"</span> &lt;&lt; endl;　　
+    <span class="built_in">return</span> 0;　
+}
+</code></pre>
+<p>图片测试：<br><img src="../images/2015/New-beginning/Visual Studio.png" alt="Visual Studio"></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[重命名用户手册]]></title>
       <url>/2015/ReanameTool-User-Manual.html</url>
       <content type="html"><![CDATA[<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><p>重命名（RenameTool）是一个重命名工具，具有以下功能：</p>
@@ -905,7 +930,7 @@
 </li>
 <li><p>可以将规则保存为文件</p>
 </li>
-<li><p>可以根据重命名操作结果执行自动操作<br>(例如，清除所有成功重命名的文件但保留有问题的文件)</p>
+<li><p>可以根据重命名操作结果执行自动操作<br>(例如，清除所有成功重命名的文件但保留有问题的文件)<a id="more"></a></p>
 </li>
 </ul>
 <h2 id="2-快速入门"><a href="#2-快速入门" class="headerlink" title="2 快速入门"></a>2 快速入门</h2><p><img src="../images/2018/RenameTool-User-Manual/0.png" alt="图1：界面说明"></p>
@@ -1412,31 +1437,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Test </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[新的开始]]></title>
-      <url>/2015/New-beginning.html</url>
-      <content type="html"><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试测试测试测试测试测试测试测试测试测试测试测试<a id="more"></a></p>
-<p>代码测试：</p>
-<pre><code class="bash"><span class="comment">#include &lt;iostream&gt;</span>
-using namespace std;　　
-int main()　　
-{　　
-    cout &lt;&lt; <span class="string">"hello world!"</span> &lt;&lt; endl;　　
-    <span class="built_in">return</span> 0;　
-}
-</code></pre>
-<p>图片测试：<br><img src="../images/2015/New-beginning/Visual Studio.png" alt="Visual Studio"></p>
 ]]></content>
       
         
