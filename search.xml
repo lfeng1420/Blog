@@ -19,7 +19,7 @@
 </li>
 <li><p>可以将规则保存为文件</p>
 </li>
-<li><p>可以根据重命名操作结果执行自动操作<br>(例如，清除所有成功重命名的文件但保留有问题的文件)<a id="more"></a></p>
+<li><p>可以根据重命名操作结果执行自动操作（例如，清除所有成功重命名的文件但保留有问题的文件）<a id="more"></a></p>
 </li>
 </ul>
 <h2 id="2-快速入门"><a href="#2-快速入门" class="headerlink" title="2 快速入门"></a>2 快速入门</h2><p><img src="../images/2019/RenameTool-User-Manual/0.png" alt="图1：界面说明"></p>
