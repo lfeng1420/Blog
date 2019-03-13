@@ -9,18 +9,18 @@
   
   <title>Windows编译curl和openssl | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\projec">
+  <meta name="description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址）">
 <meta name="keywords" content="curl,openssl,windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows编译curl和openssl">
 <meta property="og:url" content="https://blog.lfengs.com/2019/Building-openssl-with-curl-in-Windows.html">
 <meta property="og:site_name" content="lfeng">
-<meta property="og:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\projec">
+<meta property="og:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-13T14:42:12.813Z">
+<meta property="og:updated_time" content="2019-03-13T14:42:42.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows编译curl和openssl">
-<meta name="twitter:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\projec">
+<meta name="twitter:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址）">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -285,11 +285,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<p>1、安装ActivePerl（<a href="https://www.activestate.com/products/activeperl/downloads/" target="_blank" rel="noopener">下载地址</a>）</p>
+        <p>1、安装ActivePerl（<a href="https://www.activestate.com/products/activeperl/downloads/" target="_blank" rel="noopener">下载地址</a>）</p>
 <p>2、安装nasm（<a href="https://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D" target="_blank" rel="noopener">下载地址</a>）</p>
 <p>3、下载openssl的源代码（<a href="https://github.com/openssl/openssl/releases" target="_blank" rel="noopener">下载地址</a>）</p>
-<p>4、下载curl的源代码（<a href="https://github.com/curl/curl/releases" target="_blank" rel="noopener">下载地址</a>）</p>
+<p>4、下载curl的源代码（<a href="https://github.com/curl/curl/releases" target="_blank" rel="noopener">下载地址</a>）<a id="more"></a></p>
 <p>5、将以下脚本内容另存为bat文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> SOURCE_PATH=D:\projects\openssl-1.1.1b</span><br><span class="line"><span class="built_in">set</span> PREFIX=D:\projects\openssl-x64</span><br><span class="line"><span class="built_in">set</span> BUILD_CONFIG=VC-WIN64A</span><br><span class="line"><span class="built_in">set</span> INSTALL_VCENV=<span class="string">"D:\Program\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars64.bat"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> /q perl</span><br><span class="line">IF ERRORLEVEL 1 (</span><br><span class="line">    ECHO Perl cannot be found. Please ensure it is installed and placed <span class="keyword">in</span> your PATH.</span><br><span class="line">	PAUSE</span><br><span class="line">    EXIT /B</span><br><span class="line">) </span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> /q nasm</span><br><span class="line">IF ERRORLEVEL 1 (</span><br><span class="line">    ECHO nasm cannot be found. Please ensure it is installed and placed <span class="keyword">in</span> your PATH.</span><br><span class="line">	PAUSE</span><br><span class="line">    EXIT /B</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">CD /D %SOURCE_PATH%</span><br><span class="line">CALL %INSTALL_VCENV%</span><br><span class="line">perl Configure %BUILD_CONFIG% no-shared --prefix=%PREFIX%</span><br><span class="line">nmake</span><br><span class="line">nmake <span class="built_in">test</span></span><br><span class="line">nmake install</span><br></pre></td></tr></table></figure>
 <p>详细可参考openssl源代码目录下<code>INSTALL</code>中的<code>Configuration Options</code></p>
