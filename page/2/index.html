@@ -241,11 +241,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Building-openssl-with-curl-in-Windows" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Simple-introduction-of-behaviac" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/Building-openssl-with-curl-in-Windows.html" class="article-date">
-      <time datetime="2018-01-21T07:08:27.000Z" itemprop="datePublished">2018-01-21</time>
+      <a  href="/2018/Simple-introduction-of-behaviac.html" class="article-date">
+      <time datetime="2018-03-22T13:28:15.000Z" itemprop="datePublished">2018-03-22</time>
 </a>
 
     </div>
@@ -259,7 +259,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Building-openssl-with-curl-in-Windows.html">Windows编译curl和openssl</a>
+      <a  class="article-title" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a>
     </h1>
   
 
@@ -270,38 +270,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、安装ActivePerl（<a href="https://www.activestate.com/products/activeperl/downloads/" target="_blank" rel="noopener">下载地址</a>）</p>
-<p>2、安装nasm（<a href="https://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D" target="_blank" rel="noopener">下载地址</a>）</p>
-<p>3、下载openssl的源代码（<a href="https://github.com/openssl/openssl/releases" target="_blank" rel="noopener">下载地址</a>）</p>
-<p>4、下载curl的源代码（<a href="https://github.com/curl/curl/releases" target="_blank" rel="noopener">下载地址</a>）</p>
-<p>5、将以下脚本内容另存为bat文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> SOURCE_PATH=D:\projects\openssl-1.1.1b</span><br><span class="line"><span class="built_in">set</span> PREFIX=D:\projects\openssl-x64</span><br><span class="line"><span class="built_in">set</span> BUILD_CONFIG=VC-WIN64A</span><br><span class="line"><span class="built_in">set</span> INSTALL_VCENV=<span class="string">"D:\Program\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars64.bat"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> /q perl</span><br><span class="line">IF ERRORLEVEL 1 (</span><br><span class="line">    ECHO Perl cannot be found. Please ensure it is installed and placed <span class="keyword">in</span> your PATH.</span><br><span class="line">	PAUSE</span><br><span class="line">    EXIT /B</span><br><span class="line">) </span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> /q nasm</span><br><span class="line">IF ERRORLEVEL 1 (</span><br><span class="line">    ECHO nasm cannot be found. Please ensure it is installed and placed <span class="keyword">in</span> your PATH.</span><br><span class="line">	PAUSE</span><br><span class="line">    EXIT /B</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">CD /D %SOURCE_PATH%</span><br><span class="line">CALL %INSTALL_VCENV%</span><br><span class="line">perl Configure %BUILD_CONFIG% no-shared --prefix=%PREFIX%</span><br><span class="line">nmake</span><br><span class="line">nmake <span class="built_in">test</span></span><br><span class="line">nmake install</span><br></pre></td></tr></table></figure>
-<p>详细可参考openssl源代码目录下<code>INSTALL</code>中的<code>Configuration Options</code></p>
-<p>6、按实际情况修改<code>SOURCE_PATH</code>/<code>PREFIX</code>/<code>BUILD_CONFIG</code>/<code>INSTALL_VCENV</code>四个变量的值，其中：<br><code>SOURCE_PATH</code>：openssl的源代码所在目录<br><code>PREFIX</code>：编译openssl生成的文件存放的目录<br><code>BUILD_CONFIG</code>：编译配置，有以下选项可选：<code>VC-WIN64A</code>/<code>debug-VC-WIN64A</code>/<code>debug-VC-WIN32</code>/<code>VC-WIN32</code>；<br><code>INSTALL_VCENV</code>：VS的64位编译环境配置bat文件路径（如果是编译32位，则需改为<code>vcvars32.bat</code>）</p>
-<p>7、执行该bat，待编译完成后，在<code>PREFIX</code>指定的目录中可找到生成的文件列表。<br>以<code>VC-WIN64A</code>（64位release）为例，编译完成后在生成文件目录下的lib目录中可找到相应的lib文件（这里是<code>D:\projects\openssl-x64\lib</code>），dll文件则可在bin目录中找到（这里是<code>D:\projects\openssl-x64\bin</code>）</p>
-<p>8、根据curl源代码目录下的<code>winbuild/BUILD.WINDOWS.txt</code>文件描述，将openssl生成的文件转移到curl源代码目录上一层下的deps中：<br>somedirectory\<br>    |_curl-src<br>    | |_winbuild<br>    |<br>    |<em>deps<br>      |</em> lib<br>      |<em> include<br>      |</em> bin</p>
-<p>9、打开VS的本机工具命令提示（以VS2017为例，x86为<code>x86 Native Tools Command Prompt for VS 2017</code>，x64为<code>x64 Native Tools Command Prompt for VS 2017</code>），之后切换到libcurl源代码目录下的winbuild目录，以<code>D:\projects\curl-7.64.0</code>为例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CD /D D:\projects\curl-7.64.0\winbuild</span><br></pre></td></tr></table></figure>
-<p>10、根据<code>winbuild/BUILD.WINDOWS.txt</code>文件描述，执行nmake命令。以编译64位静态库为例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmake /f Makefile.vc mode=static VC=15 WITH_SSL=static MACHINE=x64 DEBUG=no</span><br></pre></td></tr></table></figure>
-<p>执行完成后，在curl源代码目录下的<code>builds\libcurl-vc15-x64-release-static-ssl-static-ipv6-sspi</code>目录中可以找到生成的文件列表。</p>
-<p>11、新建一个控制台项目用于测试，测试代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"curl/curl.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CURL *pCurl;</span><br><span class="line">	pCurl = curl_easy_init();</span><br><span class="line">	<span class="keyword">if</span> (pCurl == <span class="literal">nullptr</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"curl_easy_init FAIL!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	curl_easy_setopt(pCurl, CURLOPT_SSL_VERIFYPEER, <span class="literal">false</span>);</span><br><span class="line">	curl_easy_setopt(pCurl, CURLOPT_SSL_VERIFYHOST, <span class="literal">true</span>);</span><br><span class="line">	curl_easy_setopt(pCurl, CURLOPT_URL, <span class="string">"https://cn.bing.com"</span>);</span><br><span class="line">	curl_easy_setopt(pCurl, CURLOPT_FOLLOWLOCATION, <span class="number">1L</span>);</span><br><span class="line"></span><br><span class="line">	CURLcode nCode = curl_easy_perform(pCurl);</span><br><span class="line">	<span class="keyword">if</span> (nCode != CURLE_OK)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"curl_easy_perform FAIL! errstr="</span> &lt;&lt; curl_easy_strerror(nCode) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	curl_easy_cleanup(pCurl);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>12、项目配置修改：</p>
-<ul>
-<li><p>添加curl生成文件目录下的include目录到测试项目的附加包含目录（<code>D:\projects\curl-7.64.0\builds\libcurl-vc15-x64-release-static-ssl-static-ipv6-sspi\include</code>）</p>
-</li>
-<li><p>添加curl生成文件目录下的lib目录（<code>D:\projects\curl-7.64.0\builds\libcurl-vc15-x64-release-static-ssl-static-ipv6-sspi\lib</code>）和openssl生成文件目录下的lib目录（<code>D:\projects\openssl-x64\lib</code>）到测试项目的附加库目录</p>
-</li>
-<li>修改附加依赖项，添加以下lib文件：<code>wldap32.lib;libcrypto.lib;libssl.lib;libcurl_a.lib;Normaliz.lib;ws2_32.lib;crypt32.lib;</code></li>
-<li>预处理器添加<code>CURL_STATICLIB</code></li>
-</ul>
-<p>13、编译项目并运行，能打印出网页源代码则说明测试成功。</p>
-<p>参考：</p>
-<ul>
-<li><a href="http://www.p-nand-q.com/programming/windows/building_openssl_with_visual_studio_2013.html" target="_blank" rel="noopener">Building OpenSSL with Visual Studio</a></li>
-</ul>
-
+              <p>&emsp;&emsp;behaviac是游戏AI的开发框架组件，也是游戏原型的快速设计工具，支持全平台，适用于客户端和服务器，详细可查看： <a href="http://www.behaviac.com/language/zh/overview/" target="_blank" rel="noopener"><strong>behaviac概述</strong></a><br>&emsp;&emsp;exe安装包下载地址： <a href="https://github.com/Tencent/behaviac/releases/download/3.6.39/BehaviacSetup_3.6.39.exe" target="_blank" rel="noopener"><strong>3.6.39版</strong></a><br>&emsp;&emsp;behaviac项目源代码： <a href="https://github.com/Tencent/behaviac/archive/3.6.39.zip" target="_blank" rel="noopener"><strong>3.6.39版</strong></a><br>&emsp;&emsp;以下内容中大部分来自behaviac官方文档，详细可查看： <a href="http://www.behaviac.com/language/zh/category/%E6%96%87%E6%A1%A3/" target="_blank" rel="noopener"><strong>文档页面</strong></a><br>
+          
       
     </div>
     
@@ -309,15 +279,19 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/network/">network</a>
+    <a class="article-category-link" href="/categories/behaviac/">behaviac</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/openssl/">openssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FSM/">FSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Game-AI/">Game-AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/behaviac/">behaviac</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a   href="/2018/Simple-introduction-of-behaviac.html#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
