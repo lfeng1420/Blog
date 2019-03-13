@@ -7,15 +7,20 @@
   
   
   
-  <title>lfeng</title>
+  <title>Windows编译curl和openssl | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lfeng">
-<meta property="og:url" content="https://blog.lfengs.com/page/2/index.html">
+  <meta name="description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\project">
+<meta name="keywords" content="curl,openssl,windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows编译curl和openssl">
+<meta property="og:url" content="https://blog.lfengs.com/2018/Building-openssl-with-curl-in-Windows.html">
 <meta property="og:site_name" content="lfeng">
+<meta property="og:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\project">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-13T14:37:51.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lfeng">
+<meta name="twitter:title" content="Windows编译curl和openssl">
+<meta name="twitter:description" content="1、安装ActivePerl（下载地址） 2、安装nasm（下载地址） 3、下载openssl的源代码（下载地址） 4、下载curl的源代码（下载地址） 5、将以下脚本内容另存为bat文件： 12345678910111213141516171819202122232425set SOURCE_PATH=D:\projects\openssl-1.1.1bset PREFIX=D:\project">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -27,9 +32,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -40,8 +42,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: false,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -239,9 +241,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Building-openssl-with-curl-in-Windows" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Building-openssl-with-curl-in-Windows" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a  href="/2018/Building-openssl-with-curl-in-Windows.html" class="article-date">
@@ -258,13 +258,28 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Building-openssl-with-curl-in-Windows.html">Windows编译curl和openssl</a>
+    <h1 class="article-title" itemprop="name">
+      Windows编译curl和openssl
     </h1>
   
 
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/network/">network</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/openssl/">openssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -305,393 +320,140 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/network/">network</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/openssl/">openssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Building-cocos2dx-3_2-project-with-VS2015" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html" class="article-date">
-      <time datetime="2018-01-21T07:08:27.000Z" itemprop="datePublished">2018-01-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>&emsp;&emsp;cocos2dx3.2应该算是大家比较熟知的一个版本了，相比后续的版本，这个版本生成的apk比较小，重点是支持WP8（软粉一枚(ง •_•)ง），然而这个版本生成的项目在VS2015上编译不过。接下来介绍如何修改使VS2015能够顺利编译项目。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Cocos2dx/">Cocos2dx</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cocos2dx/">Cocos2dx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS2015/">VS2015</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html#more">查看更多 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/Building-openssl-with-curl-in-Windows.html">Windows编译curl和openssl</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
+        <p><span>发布时间:</span>2018年01月21日 - 15时08分</p>
+        <p><span>最后更新:</span>2019年03月13日 - 22时37分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/Building-openssl-with-curl-in-Windows.html" title="Windows编译curl和openssl">https://blog.lfengs.com/2018/Building-openssl-with-curl-in-Windows.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2018/Building-openssl-with-curl-in-Windows.html　　作者: lfeng" title=""></span>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TS3-create-read-write-data-with-json" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2015/TS3-create-read-write-data-with-json.html" class="article-date">
-      <time datetime="2015-11-22T15:02:59.000Z" itemprop="datePublished">2015-11-22</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>&#160; &#160; &#160; &#160;上一篇其实已经说完了这个游戏里的重要部分了，所以接下来开始写代码了。先从解析json文件开始，配置环境啥的就不写了，网上一搜大把的教程（感觉这部分其实都不用写，也有类似读取json文件的教程= =）
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2015/TS3-create-read-write-data-with-json.html#more">查看更多 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TS2-map-layout" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2015/TS2-map-layout.html" class="article-date">
-      <time datetime="2015-11-15T09:47:35.000Z" itemprop="datePublished">2015-11-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <a  href="/2018/Simple-introduction-of-behaviac.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p>&#160; &#160; &#160; &#160;原本打算写如何把json转换为plist文件，但是后来发现有些问题，所以暂时先不写了，等以后有时间补上。这一篇写写最主要的部分：关卡的布局。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2015/TS2-map-layout.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TS1-resources-analyze" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2015/TS1-resources-analyze.html" class="article-date">
-      <time datetime="2015-11-08T11:26:45.000Z" itemprop="datePublished">2015-11-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          Behaviac简单介绍
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a>
-    </h1>
   
+    <a  href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用VS2015编译Cocos2dx-3.2项目</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="开篇之前"><a href="#开篇之前" class="headerlink" title="开篇之前"></a>开篇之前</h1><hr>
-<p>&#160; &#160; &#160; &#160;想想学Cocos2d-x还是在大四上学期开始的，从那时到现在，一直想做一个自己的游戏，可能是因为自己创意不够吧，一直没这个机会，另外，和自己的水平也有很大关系。这次做的Trigger，依然是仿照写的（也就是资源是拿来的，仅仅是代码是我写的= =）。不过还好，感觉这次做的也还行，大部分功能都做好了，除了一些帮助没做（估计也没多少人会玩，所以帮助就不打算做了）。另外，也是第一次发布了WP版，捣鼓了两天弄出来了，期间也遇到了各种问题……扯得有点远了。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2015/TS1-resources-analyze.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-New-beginning" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2015/New-beginning.html" class="article-date">
-      <time datetime="2015-11-08T02:55:17.000Z" itemprop="datePublished">2015-11-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
     
-      <input type="hidden" class="isFancy" />
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2015/New-beginning.html">新的开始</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试测试测试测试测试测试测试测试测试测试测试测试
-          
-      
+            <a  href="/2018/Simple-introduction-of-behaviac.html" title="上一篇: Behaviac简单介绍">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html" title="下一篇: 使用VS2015编译Cocos2dx-3.2项目">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/ReanameTool-User-Manual.html">重命名用户手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/SVN-change-filename-to-lowercase-recursively-in-Windows.html">SVN递归将文件名改为小写</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Set-up-Master-Slave-Replication-in-MySQL.html">MySQL Master/Slave同步配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Building-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Building-openssl-with-curl-in-Windows.html">Windows编译curl和openssl</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译Cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
     
-    <div class="article-info article-info-index">
-      
-      
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test/">Test</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2015/New-beginning.html#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
