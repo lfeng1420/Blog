@@ -51,7 +51,7 @@
             
             <tag> openssl </tag>
             
-            <tag> windows </tag>
+            <tag> Windows </tag>
             
         </tags>
         
@@ -574,6 +574,12 @@
 </table>
 ]]></content>
       
+        <categories>
+            
+            <category> user-manual </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -652,7 +658,9 @@
       
         <categories>
             
-            <category> MySQL </category>
+            <category> linux </category>
+            
+            <category> database </category>
             
         </categories>
         
@@ -664,6 +672,8 @@
             <tag> master-slave </tag>
             
             <tag> replication </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -685,10 +695,22 @@
 <p>9   <code>sender.php/receiver.php</code>测试</p>
 ]]></content>
       
+        <categories>
+            
+            <category> RabbitMQ </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> RabbitMQ </tag>
+            <tag> Windows </tag>
+            
+            <tag> rabbitmq </tag>
+            
+            <tag> msg-queue </tag>
+            
+            <tag> php </tag>
             
         </tags>
         
@@ -703,10 +725,20 @@
 <p>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>使用 TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
 ]]></content>
       
+        <categories>
+            
+            <category> network </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Wininet </tag>
+            <tag> Windows </tag>
+            
+            <tag> wininet </tag>
+            
+            <tag> https </tag>
             
         </tags>
         
@@ -729,6 +761,12 @@
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -744,7 +782,7 @@
       <title><![CDATA[为cocos2dx添加protobuf-lite支持]]></title>
       <url>/2018/Add-protobuf-lite-for-cocos2dx.html</url>
       <content type="html"><![CDATA[<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
-<li>Cocos2dx 3.x以上版本（以3.4版本为例）</li>
+<li>cocos2dx 3.x以上版本（以3.4版本为例）</li>
 <li>protobuf 2.6.1（<a href="https://github.com/google/protobuf/releases/tag/v2.6.1" target="_blank" rel="noopener"><strong>release页</strong></a>）<a id="more"></a></li>
 </ul>
 <h1 id="提取protobuf-lite源文件"><a href="#提取protobuf-lite源文件" class="headerlink" title="提取protobuf-lite源文件"></a>提取protobuf-lite源文件</h1><p>&emsp;&emsp;protobuf源代码包中包含VS项目文件（<code>protobuf-2.6.1\vsprojects\</code>），可以通过打开<code>protobuf.sln</code>查看<code>libprotobuf-lite</code>依赖的文件，也可以用文本编辑器打开<code>libprotobuf-lite.vcxproj</code>查看，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\extension_set.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\generated_message_util.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\coded_stream.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\coded_stream_inl.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\zero_copy_stream.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\zero_copy_stream_impl_lite.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\message_lite.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\repeated_field.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\atomicops.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\common.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\hash.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\map-util.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\once.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\platform_macros.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\stl_util.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\stringprintf.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\template_util.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\type_traits.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\wire_format_lite.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\wire_format_lite_inl.h"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClInclude</span> <span class="attr">Include</span>=<span class="string">"config.h"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\extension_set.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\generated_message_util.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\coded_stream.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\zero_copy_stream.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\message_lite.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\repeated_field.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\common.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\once.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\stubs\stringprintf.cc"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ClCompile</span> <span class="attr">Include</span>=<span class="string">"..\src\google\protobuf\wire_format_lite.cc"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
@@ -770,14 +808,16 @@
       
         <categories>
             
-            <category> Cocos2dx </category>
+            <category> cocos2dx </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Cocos2dx </tag>
+            <tag> cocos2dx </tag>
+            
+            <tag> protobuf </tag>
             
         </tags>
         
@@ -804,6 +844,10 @@
         <tags>
             
             <tag> windbg </tag>
+            
+            <tag> crash </tag>
+            
+            <tag> dump </tag>
             
         </tags>
         
@@ -937,7 +981,7 @@
       
         <categories>
             
-            <category> github </category>
+            <category> blog </category>
             
         </categories>
         
@@ -947,6 +991,8 @@
             <tag> blog </tag>
             
             <tag> github </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -1321,7 +1367,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用VS2015编译Cocos2dx-3.2项目]]></title>
+      <title><![CDATA[使用VS2015编译cocos2dx-3.2项目]]></title>
       <url>/2018/Building-cocos2dx-3_2-project-with-VS2015.html</url>
       <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
 <p>&emsp;&emsp;cocos2dx3.2应该算是大家比较熟知的一个版本了，相比后续的版本，这个版本生成的apk比较小，重点是支持WP8（软粉一枚(ง •_•)ง），然而这个版本生成的项目在VS2015上编译不过。接下来介绍如何修改使VS2015能够顺利编译项目。<a id="more"></a></p>
@@ -1346,16 +1392,16 @@
       
         <categories>
             
-            <category> Cocos2dx </category>
+            <category> cocos2dx </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Cocos2dx </tag>
+            <tag> cocos2dx </tag>
             
-            <tag> VS2015 </tag>
+            <tag> Visual Studio </tag>
             
         </tags>
         
@@ -1388,6 +1434,8 @@
         
         
         <tags>
+            
+            <tag> cocos2dx </tag>
             
             <tag> Trigger </tag>
             
@@ -1428,6 +1476,8 @@
         
         <tags>
             
+            <tag> cocos2dx </tag>
+            
             <tag> Trigger </tag>
             
         </tags>
@@ -1462,6 +1512,8 @@
         
         
         <tags>
+            
+            <tag> cocos2dx </tag>
             
             <tag> Trigger </tag>
             
