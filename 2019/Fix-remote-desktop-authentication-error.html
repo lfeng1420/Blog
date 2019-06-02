@@ -5,19 +5,22 @@
   <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
   
   
-   
-    <meta name="keywords" content="Trigger" />
   
   
-  <title>Category: Trigger | lfeng</title>
+  <title>解决Win7远程桌面连接发生身份验证错误问题 | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lfeng">
-<meta property="og:url" content="https://blog.lfengs.com/categories/Trigger/index.html">
+  <meta name="description" content="打开注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System下新建CredSSP项，之后在CredSSP项下新建Parameters项，最后在Parameters项下新建DWORD（32-位）值，名称为AllowEncryptionOracle，值为2。如下图： 也可以将如下代码保存为reg">
+<meta name="keywords" content="Windows,mstsc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Win7远程桌面连接发生身份验证错误问题">
+<meta property="og:url" content="https://blog.lfengs.com/2019/Fix-remote-desktop-authentication-error.html">
 <meta property="og:site_name" content="lfeng">
+<meta property="og:description" content="打开注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System下新建CredSSP项，之后在CredSSP项下新建Parameters项，最后在Parameters项下新建DWORD（32-位）值，名称为AllowEncryptionOracle，值为2。如下图： 也可以将如下代码保存为reg">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-02T03:35:30.637Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lfeng">
+<meta name="twitter:title" content="解决Win7远程桌面连接发生身份验证错误问题">
+<meta name="twitter:description" content="打开注册表，在HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System下新建CredSSP项，之后在CredSSP项下新建Parameters项，最后在Parameters项下新建DWORD（32-位）值，名称为AllowEncryptionOracle，值为2。如下图： 也可以将如下代码保存为reg">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -40,10 +43,10 @@
           fancybox: true,
           animate: false,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
-          isCategory: true,
+          isCategory: false,
           open_in_new: true
       }
   </script>
@@ -238,134 +241,180 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Fix-remote-desktop-authentication-error" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a  href="/2019/Fix-remote-desktop-authentication-error.html" class="article-date">
+      <time datetime="2019-06-02T03:28:46.000Z" itemprop="datePublished">2019-06-02</time>
+</a>
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      解决Win7远程桌面连接发生身份验证错误问题
+    </h1>
+  
+
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Windows/">Windows</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mstsc/">mstsc</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a  href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2015/TS3-create-read-write-data-with-json.html" class="archive-article-date">
-      <time datetime="2015-11-22T15:02:59.000Z" itemprop="datePublished">11-22</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
+        <p><a href="/../images/2019/Fix-remote-desktop-authentication-error/1.png"></a></p>
+<p>打开注册表，在<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code>下新建<code>CredSSP</code>项，之后在<code>CredSSP</code>项下新建<code>Parameters</code>项，最后在<code>Parameters</code>项下新建DWORD（32-位）值，名称为<code>AllowEncryptionOracle</code>，值为2。如下图：<br><a href="/../images/2019/Fix-remote-desktop-authentication-error/2.png"></a></p>
+<p>也可以将如下代码保存为reg后缀文件，之后合并。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP]</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters]</span><br><span class="line"><span class="string">"AllowEncryptionOracle"</span>=dword:00000002</span><br></pre></td></tr></table></figure></p>
+
+      
     </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2dx/">cocos2dx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2019/Fix-remote-desktop-authentication-error.html">解决Win7远程桌面连接发生身份验证错误问题</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
+        <p><span>发布时间:</span>2019年06月02日 - 11时28分</p>
+        <p><span>最后更新:</span>2019年06月02日 - 11时35分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/Fix-remote-desktop-authentication-error.html" title="解决Win7远程桌面连接发生身份验证错误问题">https://blog.lfengs.com/2019/Fix-remote-desktop-authentication-error.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2019/Fix-remote-desktop-authentication-error.html　　作者: lfeng" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2019/Building-openssl-with-curl-in-Windows.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Windows编译curl和openssl</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
 </article>
-  
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
     
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2015/TS2-map-layout.html" class="archive-article-date">
-      <time datetime="2015-11-15T09:47:35.000Z" itemprop="datePublished">11-15</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a>
-    </h1>
-  
 
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2019/Building-openssl-with-curl-in-Windows.html" title="下一篇: Windows编译curl和openssl">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2dx/">cocos2dx</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/Fix-remote-desktop-authentication-error.html">解决Win7远程桌面连接发生身份验证错误问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/Building-openssl-with-curl-in-Windows.html">Windows编译curl和openssl</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/ReanameTool-User-Manual.html">重命名用户手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/SVN-change-filename-to-lowercase-recursively-in-Windows.html">SVN递归将文件名改为小写</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Set-up-Master-Slave-Replication-in-MySQL.html">MySQL Master/Slave同步配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/RabbitMQ-Installation-Guide-on-Windows.html">Windows下安装RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html">Ubuntu环境下创建和使用动态库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Add-protobuf-lite-for-cocos2dx.html">为cocos2dx添加protobuf-lite支持</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Analyze-CLR-application-dump-with-windbg.html">使用Windbg简单分析托管程序dump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Building-personal-blog-with-github-and-hexo.html">使用Github和hexo搭建个人博客（多图）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Simple-introduction-of-behaviac.html">Behaviac简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/Building-cocos2dx-3_2-project-with-VS2015.html">使用VS2015编译cocos2dx-3.2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS3-create-read-write-data-with-json.html">Trigger第三篇：创建、读取和写入json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS2-map-layout.html">Trigger第二篇：关卡布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/New-beginning.html">新的开始</a></li></ul>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2015/TS1-resources-analyze.html" class="archive-article-date">
-      <time datetime="2015-11-08T11:26:45.000Z" itemprop="datePublished">11-08</time>
-</a>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2015/TS1-resources-analyze.html">Trigger第一篇：简介以及资源分析</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Trigger/">Trigger</a>
-    </div>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trigger/">Trigger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2dx/">cocos2dx</a></li></ul>
-    </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
@@ -434,18 +483,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
