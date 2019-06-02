@@ -5,8 +5,8 @@
     <entry>
       <title><![CDATA[解决Win7远程桌面连接发生身份验证错误问题]]></title>
       <url>/2019/Fix-remote-desktop-authentication-error.html</url>
-      <content type="html"><![CDATA[<p><a href="/../images/2019/Fix-remote-desktop-authentication-error/1.png"></a></p>
-<p>打开注册表，在<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code>下新建<code>CredSSP</code>项，之后在<code>CredSSP</code>项下新建<code>Parameters</code>项，最后在<code>Parameters</code>项下新建DWORD（32-位）值，名称为<code>AllowEncryptionOracle</code>，值为2。如下图：<br><a href="/../images/2019/Fix-remote-desktop-authentication-error/2.png"></a></p>
+      <content type="html"><![CDATA[<p><img src="/../images/2019/Fix-remote-desktop-authentication-error/1.png" alt=""></p>
+<p>打开注册表，在<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code>下新建<code>CredSSP</code>项，之后在<code>CredSSP</code>项下新建<code>Parameters</code>项，最后在<code>Parameters</code>项下新建DWORD（32-位）值，名称为<code>AllowEncryptionOracle</code>，值为2。如下图：<br><img src="/../images/2019/Fix-remote-desktop-authentication-error/2.png" alt=""></p>
 <p>也可以将如下代码保存为reg后缀文件，之后合并。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP]</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters]</span><br><span class="line"><span class="string">"AllowEncryptionOracle"</span>=dword:00000002</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       
