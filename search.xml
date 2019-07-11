@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[ZooKeeper服务框架介绍]]></title>
       <url>/2019/ZooKeeper-Intro.html</url>
-      <content type="html"><![CDATA[<h2 id="1-描述"><a href="#1-描述" class="headerlink" title="1 描述"></a>1 描述</h2><p><code>ZooKeeper</code>（简称ZK）是一个开源的分布式协调服务，其设计目标是将那些复杂且容易出错的分布式一致性服务封装起来，构成一个高效可靠的<strong>原语集</strong>，并以一系列简单易用的接口提供给用户使用。</p>
-<p><strong>原语： 操作系统或计算机网络用语范畴，由若干条指令组成，用于完成一定功能的一个过程，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。</strong></p>
+      <content type="html"><![CDATA[<h2 id="1-描述"><a href="#1-描述" class="headerlink" title="1 描述"></a>1 描述</h2><p><code>ZooKeeper</code>（简称ZK）是一个开源的分布式协调服务，其设计目标是将那些复杂且容易出错的分布式一致性服务封装起来，构成一个高效可靠的<strong>原语集</strong>，并以一系列简单易用的接口提供给用户使用。<br><strong>原语： 操作系统或计算机网络用语范畴，由若干条指令组成，用于完成一定功能的一个过程，具有不可分割性，即原语的执行必须是连续的，在执行过程中不允许被中断。</strong><br><a id="more"></a></p>
 <h3 id="1-1-特性"><a href="#1-1-特性" class="headerlink" title="1.1 特性"></a>1.1 特性</h3><ul>
 <li><strong>顺序一致性</strong>：客户端发起的更新会按发送顺序被应用到ZK上；</li>
 <li><strong>原子性</strong>：更新操作要么成功要么失败，不会出现中间状态；</li>
