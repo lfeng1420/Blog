@@ -125,8 +125,8 @@
 <h3 id="动态扩容问题"><a href="#动态扩容问题" class="headerlink" title="动态扩容问题"></a>动态扩容问题</h3><p>逐个服务器重启：每次操作一台服务器，更新配置后重启，优先操作新的服务器。<br>整体重启：停止所有服务器，更新配置后全部启动。</p>
 <h3 id="奇数服务器数量问题"><a href="#奇数服务器数量问题" class="headerlink" title="奇数服务器数量问题"></a>奇数服务器数量问题</h3><p>任意数量台服务器都可以构建为一个ZK集群。但考虑如下情况：</p>
 <ul>
-<li>服务器数量为偶数（假设为2n），过半为n+1，允许宕掉的服务器数量为n-1</li>
-<li>服务器数量为奇数（假设为2n-1），过半为n，允许宕掉的服务器数量为n-1</li>
+<li>服务器数量为偶数（假设为<code>2n</code>），过半为<code>n+1</code>，允许宕掉的服务器数量为<code>n-1</code></li>
+<li>服务器数量为奇数（假设为<code>2n-1</code>），过半为<code>n</code>，允许宕掉的服务器数量为<code>n-1</code></li>
 </ul>
 <p>配置为奇数数量相比于偶数数量少占用一台服务器，因此奇数数量服务器配置更有优势。</p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] <a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-zookeeper/" target="_blank" rel="noopener">分布式服务框架 Zookeeper — 管理分布式环境中的数据</a><br>[2] <a href="https://www.cnblogs.com/leesf456/p/6012777.html" target="_blank" rel="noopener">【分布式】Zookeeper与Paxos</a><br>[3] <a href="http://www.jasongj.com/zookeeper/distributedlock/" target="_blank" rel="noopener">深入浅出Zookeeper（二） 基于Zookeeper的分布式锁与领导选举</a><br>[4] <a href="http://www.jasongj.com/zookeeper/fastleaderelection/" target="_blank" rel="noopener">深入浅出Zookeeper（一） Zookeeper架构及FastLeaderElection机制</a><br>[5] <a href="https://www.cnblogs.com/ASPNET2008/p/6421571.html" target="_blank" rel="noopener">理解zookeeper选举机制</a><br>[6] <a href="https://www.jianshu.com/p/c2ced54736aa" target="_blank" rel="noopener">Zookeeper选举算法原理（摘选）</a><br>[7] <a href="https://www.cnblogs.com/haippy/archive/2013/02/21/2919365.html" target="_blank" rel="noopener">Zookeeper C API 指南一(准备工作)</a><br>[8] <a href="http://sel-fish.net/2017/06/12/zk-data-sync" target="_blank" rel="noopener">ZooKeeper - Data Sync</a>    </p>
@@ -221,11 +221,11 @@
         
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> curl </tag>
             
             <tag> openssl </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
         
