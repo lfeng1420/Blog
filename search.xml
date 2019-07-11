@@ -133,6 +133,12 @@
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] <a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-zookeeper/" target="_blank" rel="noopener">分布式服务框架 Zookeeper — 管理分布式环境中的数据</a><br>[2] <a href="https://www.cnblogs.com/leesf456/p/6012777.html" target="_blank" rel="noopener">【分布式】Zookeeper与Paxos</a><br>[3] <a href="http://www.jasongj.com/zookeeper/distributedlock/" target="_blank" rel="noopener">深入浅出Zookeeper（二） 基于Zookeeper的分布式锁与领导选举</a><br>[4] <a href="http://www.jasongj.com/zookeeper/fastleaderelection/" target="_blank" rel="noopener">深入浅出Zookeeper（一） Zookeeper架构及FastLeaderElection机制</a><br>[5] <a href="https://www.cnblogs.com/ASPNET2008/p/6421571.html" target="_blank" rel="noopener">理解zookeeper选举机制</a><br>[6] <a href="https://www.jianshu.com/p/c2ced54736aa" target="_blank" rel="noopener">Zookeeper选举算法原理（摘选）</a><br>[7] <a href="https://www.cnblogs.com/haippy/archive/2013/02/21/2919365.html" target="_blank" rel="noopener">Zookeeper C API 指南一(准备工作)</a><br>[8] <a href="http://sel-fish.net/2017/06/12/zk-data-sync" target="_blank" rel="noopener">ZooKeeper - Data Sync</a>    </p>
 ]]></content>
       
+        <categories>
+            
+            <category> Framework </category>
+            
+        </categories>
+        
         
         <tags>
             
