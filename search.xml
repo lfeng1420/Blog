@@ -9,6 +9,22 @@
 <p>回到<code>yaSSL_get_session</code>这一帧，可以确定是<code>GetSessions()</code>返回了空指针。查看<code>GetSessions</code>代码，以及结合<code>yassl_pthread_once</code>宏定义可以发现，<code>c_session_initialize</code>函数在整个运行时只执行了一次，执行标识由<code>session_created</code>记录，其最终调用<code>Session_initialize</code>为<code>sessionsInstance</code>生成一个对象，<code>sessionsInstance</code>在<code>yaSSL_CleanUp</code>函数内释放。<br>问题在于<code>session_created</code>标识没有随着<code>sessionsInstance</code>释放而重置，导致下一次执行到<code>GetSessions</code>时不会再重新生成<code>Sessions</code>对象。解决办法是在<code>yaSSL_CleanUp</code>函数内增加<code>session_created</code>重置操作。如下代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> <span class="function"><span class="keyword">void</span> <span class="title">yaSSL_CleanUp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TaoCrypt::CleanUp();</span><br><span class="line">    yaSSL::ysDelete(yaSSL::sslFactoryInstance);</span><br><span class="line">    yaSSL::ysDelete(yaSSL::sessionsInstance);</span><br><span class="line">    yaSSL::ysDelete(yaSSL::errorsInstance);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// In case user calls more than once, prevent seg fault</span></span><br><span class="line">    yaSSL::sslFactoryInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::sessionsInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::errorsInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::session_created = YASSL_PTHREAD_ONCE_INIT;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Windows </category>
+            
+            <category> database </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SSL </tag>
+            
+        </tags>
         
     </entry>
     
