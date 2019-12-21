@@ -7,24 +7,19 @@
   
   
   
-  <title>HTTPSendRequest失败返回12029的一个解决方案 | lfeng</title>
+  <title>解决mysql connector重复使用时在SSL内部出现非法的问题 | lfeng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解决方案&amp;emsp;&amp;emsp;Internet选项中按需求勾选TLS对应版本。">
-<meta name="keywords" content="Windows,wininet,https">
+  <meta name="description" content="执行DBEngine的测试用例时发现如果包含多个测试用例组（TestSuite），会在执行第二个测试用例时在Mutex::Lock::Lock(mysql-connector-c-path\extra\yassl\src\lock.cpp, 47)处抛出异常，且this指针为nullptr。堆栈如下：123456789101112 	ntdll.dll!00007ffd35b7b40d()	Unk">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTPSendRequest失败返回12029的一个解决方案">
-<meta property="og:url" content="https://blog.lfengs.com/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">
+<meta property="og:title" content="解决mysql connector重复使用时在SSL内部出现非法的问题">
+<meta property="og:url" content="https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html">
 <meta property="og:site_name" content="lfeng">
-<meta property="og:description" content="解决方案&amp;emsp;&amp;emsp;Internet选项中按需求勾选TLS对应版本。">
+<meta property="og:description" content="执行DBEngine的测试用例时发现如果包含多个测试用例组（TestSuite），会在执行第二个测试用例时在Mutex::Lock::Lock(mysql-connector-c-path\extra\yassl\src\lock.cpp, 47)处抛出异常，且this指针为nullptr。堆栈如下：123456789101112 	ntdll.dll!00007ffd35b7b40d()	Unk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://blog.lfengs.com/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png">
-<meta property="og:image" content="https://blog.lfengs.com/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png">
-<meta property="og:image" content="https://blog.lfengs.com/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png">
-<meta property="og:updated_time" content="2019-03-13T15:01:13.241Z">
+<meta property="og:updated_time" content="2019-12-21T09:19:35.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTPSendRequest失败返回12029的一个解决方案">
-<meta name="twitter:description" content="解决方案&amp;emsp;&amp;emsp;Internet选项中按需求勾选TLS对应版本。">
-<meta name="twitter:image" content="https://blog.lfengs.com/images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png">
+<meta name="twitter:title" content="解决mysql connector重复使用时在SSL内部出现非法的问题">
+<meta name="twitter:description" content="执行DBEngine的测试用例时发现如果包含多个测试用例组（TestSuite），会在执行第二个测试用例时在Mutex::Lock::Lock(mysql-connector-c-path\extra\yassl\src\lock.cpp, 47)处抛出异常，且this指针为nullptr。堆栈如下：123456789101112 	ntdll.dll!00007ffd35b7b40d()	Unk">
   
     <link rel="alternative" href="/atom.xml" title="lfeng" type="application/atom+xml">
   
@@ -245,11 +240,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-One-way-to-resolve-HTTP-send-request-return-12029" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" class="article-date">
-      <time datetime="2018-11-09T00:52:36.000Z" itemprop="datePublished">2018-11-09</time>
+      <a  href="/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html" class="article-date">
+      <time datetime="2019-12-21T08:54:51.000Z" itemprop="datePublished">2019-12-21</time>
 </a>
 
     </div>
@@ -263,7 +258,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HTTPSendRequest失败返回12029的一个解决方案
+      解决mysql connector重复使用时在SSL内部出现非法的问题
     </h1>
   
 
@@ -272,16 +267,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/network/">network</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/">https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wininet/">wininet</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -289,10 +276,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>&emsp;&emsp;Internet选项中按需求勾选TLS对应版本。<a id="more"></a></p>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>&emsp;&emsp;使用<code>Postman</code>发送POST请求能正常返回，但通过HttpSendRequest发送POST请求总是失败，<code>GetLastError</code>返回12029。使用<code>Fiddler</code>抓包查看两次请求的内容如下：<br><br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/0.png" alt="成功的请求"></p>
-<p><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/1.png" alt="失败的请求"></p>
-<p>&emsp;&emsp;对比发现两次请求的<code>Version</code>不一致，也就是TLS版本不对应，勾选<code>使用 TLS 1.2</code>版本之后便正常了。<br><img src="../images/2018/One-way-to-resolve-HTTP-send-request-return-12029/2.png" alt="TLS设置"></p>
+        <p>执行DBEngine的测试用例时发现如果包含多个测试用例组（<code>TestSuite</code>），会在执行第二个测试用例时在<code>Mutex::Lock::Lock(mysql-connector-c-path\extra\yassl\src\lock.cpp, 47)</code>处抛出异常，且<code>this</code>指针为<code>nullptr</code>。堆栈如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> 	ntdll.dll!00007ffd35b7b40d()	Unknown</span><br><span class="line">&gt;	libmysql_d.dll!yaSSL::Mutex::Lock::Lock(yaSSL::Mutex &amp; lm) Line 47	C++</span><br><span class="line"> 	libmysql_d.dll!yaSSL::Sessions::lookup(const unsigned char * id, yaSSL::SSL_SESSION * copy) Line 1829	C++</span><br><span class="line"> 	libmysql_d.dll!yaSSL_get_session(yaSSL::SSL * ssl) Line 513	C++</span><br><span class="line"> 	libmysql_d.dll!ssl_do(st_VioSSLFd * ptr, st_vio * vio, long timeout, int(*)(SSL *) func, unsigned long * ssl_errno_holder) Line 402	C</span><br><span class="line"> 	libmysql_d.dll!sslconnect(st_VioSSLFd * ptr, st_vio * vio, long timeout, unsigned long * ssl_errno_holder) Line 502	C</span><br><span class="line"> 	libmysql_d.dll!cli_establish_ssl(st_mysql * mysql) Line 3591	C</span><br><span class="line"> 	libmysql_d.dll!mysql_real_connect(st_mysql * mysql, const char * host, const char * user, const char * passwd, const char * db, unsigned int port, const char * unix_socket, unsigned long client_flag) Line 4774	C</span><br><span class="line"> 	DBEngine.dll!CMysqlConn::Connect() Line 41	C++</span><br><span class="line"> 	DBEngine.dll!CGeneralQueryTask::OnExecute(dbengine::IDBPool * pDBPool) Line 43	C++</span><br><span class="line"> 	DBEngine.dll!CDBThread::OnThreadRun() Line 35	C++</span><br><span class="line"> 	DBEngine.dll!CThreadBase::StartThread::__l2::&lt;lambda&gt;() Line 20	C++</span><br></pre></td></tr></table></figure></p>
+<p>回到<code>yaSSL_get_session</code>这一帧，可以确定是<code>GetSessions()</code>返回了空指针。查看<code>GetSessions</code>代码，以及结合<code>yassl_pthread_once</code>宏定义可以发现，<code>c_session_initialize</code>函数在整个运行时只执行了一次，执行标识由<code>session_created</code>记录，其最终调用<code>Session_initialize</code>为<code>sessionsInstance</code>生成一个对象，<code>sessionsInstance</code>在<code>yaSSL_CleanUp</code>函数内释放。<br>问题在于<code>session_created</code>标识没有随着<code>sessionsInstance</code>释放而重置，导致下一次执行到<code>GetSessions</code>时不会再重新生成<code>Sessions</code>对象。解决办法是在<code>yaSSL_CleanUp</code>函数内增加<code>session_created</code>重置操作。如下代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> <span class="function"><span class="keyword">void</span> <span class="title">yaSSL_CleanUp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TaoCrypt::CleanUp();</span><br><span class="line">    yaSSL::ysDelete(yaSSL::sslFactoryInstance);</span><br><span class="line">    yaSSL::ysDelete(yaSSL::sessionsInstance);</span><br><span class="line">    yaSSL::ysDelete(yaSSL::errorsInstance);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// In case user calls more than once, prevent seg fault</span></span><br><span class="line">    yaSSL::sslFactoryInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::sessionsInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::errorsInstance = <span class="number">0</span>;</span><br><span class="line">    yaSSL::session_created = YASSL_PTHREAD_ONCE_INIT;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -301,13 +286,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html">HTTPSendRequest失败返回12029的一个解决方案</a></p>
+        <p><span>本文标题:</span><a  href="/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html">解决mysql connector重复使用时在SSL内部出现非法的问题</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
-        <p><span>发布时间:</span>2018年11月09日 - 08时52分</p>
-        <p><span>最后更新:</span>2019年03月13日 - 23时01分</p>
+        <p><span>发布时间:</span>2019年12月21日 - 16时54分</p>
+        <p><span>最后更新:</span>2019年12月21日 - 17时19分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/One-way-to-resolve-HTTP-send-request-return-12029.html" title="HTTPSendRequest失败返回12029的一个解决方案">https://blog.lfengs.com/2018/One-way-to-resolve-HTTP-send-request-return-12029.html</a>
-            <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2018/One-way-to-resolve-HTTP-send-request-return-12029.html　　作者: lfeng" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html" title="解决mysql connector重复使用时在SSL内部出现非法的问题">https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html　　作者: lfeng" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -318,18 +303,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Windows下安装RabbitMQ
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Ubuntu环境下创建和使用动态库</div>
+    <a  href="/2019/ZooKeeper-Intro.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ZooKeeper服务框架介绍</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -341,7 +317,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方案"><span class="toc-number">1.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -390,13 +366,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/RabbitMQ-Installation-Guide-on-Windows.html" title="上一篇: Windows下安装RabbitMQ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/Create-and-use-dynamic-library-in-Ubuntu.html" title="下一篇: Ubuntu环境下创建和使用动态库">
+            <a  href="/2019/ZooKeeper-Intro.html" title="下一篇: ZooKeeper服务框架介绍">
                 <i class="fa fa-angle-right"></i>
             </a>
         
