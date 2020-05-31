@@ -247,11 +247,11 @@
         
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> curl </tag>
             
             <tag> openssl </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
         
@@ -935,11 +935,11 @@
         
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> wininet </tag>
             
             <tag> https </tag>
-            
-            <tag> Windows </tag>
             
         </tags>
         

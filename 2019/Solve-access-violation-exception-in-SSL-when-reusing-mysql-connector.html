@@ -13,7 +13,7 @@
 <meta name="keywords" content="MySQL,SSL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决mysql connector重复使用时在SSL内部出现非法的问题">
-<meta property="og:url" content="https://www.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html">
+<meta property="og:url" content="https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html">
 <meta property="og:site_name" content="lfeng">
 <meta property="og:description" content="最近在写一个DBEngine，其内部封装了mysql的一些api操作，在写测试用例时发现如果包含多个测试用例组（TestSuite），会在执行第二个测试用例时在Mutex::Lock::Lock(mysql-connector-c-path\extra\yassl\src\lock.cpp, 47)处抛出异常，且this指针为nullptr。">
 <meta property="og:locale" content="zh-Hans">
@@ -300,8 +300,8 @@
         <p><span>发布时间:</span>2019年12月21日 - 16时54分</p>
         <p><span>最后更新:</span>2019年12月21日 - 17时34分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html" title="解决mysql connector重复使用时在SSL内部出现非法的问题">https://www.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html</a>
-            <span class="copy-path" data-clipboard-text="原文: https://www.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html　　作者: lfeng" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html" title="解决mysql connector重复使用时在SSL内部出现非法的问题">https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2019/Solve-access-violation-exception-in-SSL-when-reusing-mysql-connector.html　　作者: lfeng" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
