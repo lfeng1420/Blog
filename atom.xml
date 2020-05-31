@@ -117,11 +117,11 @@
       <category term="network" scheme="https://blog.lfengs.com/categories/network/"/>
     
     
-      <category term="Windows" scheme="https://blog.lfengs.com/tags/Windows/"/>
-    
       <category term="curl" scheme="https://blog.lfengs.com/tags/curl/"/>
     
       <category term="openssl" scheme="https://blog.lfengs.com/tags/openssl/"/>
+    
+      <category term="Windows" scheme="https://blog.lfengs.com/tags/Windows/"/>
     
   </entry>
   
