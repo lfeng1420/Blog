@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="lfeng">
 <meta property="og:description" content="安装安装epel-release、distcc、distcc-server，可能需要先安装epel-release，才能安装后面两个。12yum -y install epel-releaseyum -y install distcc distcc-server">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-11-01T15:02:33.761Z">
+<meta property="og:updated_time" content="2020-11-01T15:04:40.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS使用distcc分布式编译">
 <meta name="twitter:description" content="安装安装epel-release、distcc、distcc-server，可能需要先安装epel-release，才能安装后面两个。12yum -y install epel-releaseyum -y install distcc distcc-server">
@@ -294,7 +294,7 @@
 <p>其中，<code>192.168.180.0/24</code>需要自行修改为相应机器的IP段或指定IP，<code>--port 1234</code>可自行修改端口号，其他选项可以参考<code>Manual</code>。</p>
 <h2 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h2><p>在.bashrc中增加导出<code>DISTCC_HOSTS</code>配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISTCC_HOSTS=<span class="string">'192.168.180.10:1234 192.168.180.9:1234/15'</span></span><br></pre></td></tr></table></figure></p>
 <p>其中<code>/15</code>表示限制该机器job数量为15，可自行调整。</p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行<code>make -j4 CC=distcc CXX=distcc</code></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行示例：<code>make -j4 CC=distcc CXX=distcc</code></p>
 
       
     </div>
@@ -306,7 +306,7 @@
         <p><span>本文标题:</span><a  href="/2020/Build-with-distcc-in-CentOS.html">CentOS使用distcc分布式编译</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 lfeng 的个人博客">lfeng</a></p>
         <p><span>发布时间:</span>2020年11月01日 - 23时01分</p>
-        <p><span>最后更新:</span>2020年11月01日 - 23时02分</p>
+        <p><span>最后更新:</span>2020年11月01日 - 23时04分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/Build-with-distcc-in-CentOS.html" title="CentOS使用distcc分布式编译">https://blog.lfengs.com/2020/Build-with-distcc-in-CentOS.html</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.lfengs.com/2020/Build-with-distcc-in-CentOS.html　　作者: lfeng" title=""></span>

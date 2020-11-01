@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lfengs.com/"/>
-  <updated>2020-11-01T15:02:33.761Z</updated>
+  <updated>2020-11-01T15:04:40.391Z</updated>
   <id>https://blog.lfengs.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.lfengs.com/2020/Build-with-distcc-in-CentOS.html"/>
     <id>https://blog.lfengs.com/2020/Build-with-distcc-in-CentOS.html</id>
     <published>2020-11-01T15:01:53.000Z</published>
-    <updated>2020-11-01T15:02:33.761Z</updated>
+    <updated>2020-11-01T15:04:40.391Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装<code>epel-release</code>、<code>distcc</code>、<code>distcc-server</code>，可能需要先安装<code>epel-release</code>，才能安装后面两个。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install distcc distcc-server</span><br></pre></td></tr></table></figure></p><a id="more"></a><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="distccd"><a href="#distccd" class="headerlink" title="distccd"></a><code>distccd</code></h2><p>修改distccd配置，路径：<code>/etc/sysconfig/distccd</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### See distcc(1) manual page for more information on these options.</span></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line">OPTIONS=<span class="string">"--nice 4 --jobs 4 --allow 192.168.180.0/24 --allow 127.0.0.1 --port 1234"</span></span><br><span class="line"><span class="comment">#USER="distcc"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### Set this if don't want distccd to use gcc or g++ by accident.</span></span><br><span class="line">DISTCCPATH=<span class="string">"/usr/lib/distcc/bin"</span></span><br><span class="line"></span><br><span class="line">DISTCC_LOG=<span class="string">"/root/distcc.log"</span></span><br><span class="line">DISTCC_VERBOSE=1</span><br></pre></td></tr></table></figure></p><p>其中，<code>192.168.180.0/24</code>需要自行修改为相应机器的IP段或指定IP，<code>--port 1234</code>可自行修改端口号，其他选项可以参考<code>Manual</code>。</p><h2 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h2><p>在.bashrc中增加导出<code>DISTCC_HOSTS</code>配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISTCC_HOSTS=<span class="string">'192.168.180.10:1234 192.168.180.9:1234/15'</span></span><br></pre></td></tr></table></figure></p><p>其中<code>/15</code>表示限制该机器job数量为15，可自行调整。</p><h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行<code>make -j4 CC=distcc CXX=distcc</code></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装<code>epel-release</code>、<code>distcc</code>、<code>distcc-server</code>，可能需要先安装<code>epel-release</code>，才能安装后面两个。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install distcc distcc-server</span><br></pre></td></tr></table></figure></p><a id="more"></a><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="distccd"><a href="#distccd" class="headerlink" title="distccd"></a><code>distccd</code></h2><p>修改distccd配置，路径：<code>/etc/sysconfig/distccd</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### See distcc(1) manual page for more information on these options.</span></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line">OPTIONS=<span class="string">"--nice 4 --jobs 4 --allow 192.168.180.0/24 --allow 127.0.0.1 --port 1234"</span></span><br><span class="line"><span class="comment">#USER="distcc"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### Set this if don't want distccd to use gcc or g++ by accident.</span></span><br><span class="line">DISTCCPATH=<span class="string">"/usr/lib/distcc/bin"</span></span><br><span class="line"></span><br><span class="line">DISTCC_LOG=<span class="string">"/root/distcc.log"</span></span><br><span class="line">DISTCC_VERBOSE=1</span><br></pre></td></tr></table></figure></p><p>其中，<code>192.168.180.0/24</code>需要自行修改为相应机器的IP段或指定IP，<code>--port 1234</code>可自行修改端口号，其他选项可以参考<code>Manual</code>。</p><h2 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h2><p>在.bashrc中增加导出<code>DISTCC_HOSTS</code>配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISTCC_HOSTS=<span class="string">'192.168.180.10:1234 192.168.180.9:1234/15'</span></span><br></pre></td></tr></table></figure></p><p>其中<code>/15</code>表示限制该机器job数量为15，可自行调整。</p><h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行示例：<code>make -j4 CC=distcc CXX=distcc</code></p>]]></content>
     
     <summary type="html">
     
@@ -144,11 +144,11 @@
       <category term="network" scheme="https://blog.lfengs.com/categories/network/"/>
     
     
-      <category term="Windows" scheme="https://blog.lfengs.com/tags/Windows/"/>
-    
       <category term="curl" scheme="https://blog.lfengs.com/tags/curl/"/>
     
       <category term="openssl" scheme="https://blog.lfengs.com/tags/openssl/"/>
+    
+      <category term="Windows" scheme="https://blog.lfengs.com/tags/Windows/"/>
     
   </entry>
   

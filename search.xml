@@ -11,7 +11,7 @@
 <p>其中，<code>192.168.180.0/24</code>需要自行修改为相应机器的IP段或指定IP，<code>--port 1234</code>可自行修改端口号，其他选项可以参考<code>Manual</code>。</p>
 <h2 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h2><p>在.bashrc中增加导出<code>DISTCC_HOSTS</code>配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DISTCC_HOSTS=<span class="string">'192.168.180.10:1234 192.168.180.9:1234/15'</span></span><br></pre></td></tr></table></figure></p>
 <p>其中<code>/15</code>表示限制该机器job数量为15，可自行调整。</p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行<code>make -j4 CC=distcc CXX=distcc</code></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>编译自己的项目，执行示例：<code>make -j4 CC=distcc CXX=distcc</code></p>
 ]]></content>
       
         <categories>
@@ -278,11 +278,11 @@
         
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> curl </tag>
             
             <tag> openssl </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
         
