@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[CentOS使用distcc分布式编译]]></title>
-      <url>/2020/Make-with-distcc-in-Centos.html</url>
+      <url>/2020/Build-with-distcc-in-CentOS.html</url>
       <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装<code>epel-release</code>、<code>distcc</code>、<code>distcc-server</code>，可能需要先安装<code>epel-release</code>，才能安装后面两个。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install distcc distcc-server</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="distccd"><a href="#distccd" class="headerlink" title="distccd"></a><code>distccd</code></h2><p>修改distccd配置，路径：<code>/etc/sysconfig/distccd</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### See distcc(1) manual page for more information on these options.</span></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line">OPTIONS=<span class="string">"--nice 4 --jobs 4 --allow 192.168.180.0/24 --allow 127.0.0.1 --port 1234"</span></span><br><span class="line"><span class="comment">#USER="distcc"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### Set this if don't want distccd to use gcc or g++ by accident.</span></span><br><span class="line">DISTCCPATH=<span class="string">"/usr/lib/distcc/bin"</span></span><br><span class="line"></span><br><span class="line">DISTCC_LOG=<span class="string">"/root/distcc.log"</span></span><br><span class="line">DISTCC_VERBOSE=1</span><br></pre></td></tr></table></figure></p>
@@ -23,11 +23,11 @@
         
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> distcc </tag>
             
             <tag> centos </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -278,11 +278,11 @@
         
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> curl </tag>
             
             <tag> openssl </tag>
-            
-            <tag> Windows </tag>
             
         </tags>
         
@@ -899,13 +899,13 @@
         
         <tags>
             
+            <tag> linux </tag>
+            
             <tag> MySQL </tag>
             
             <tag> master-slave </tag>
             
             <tag> replication </tag>
-            
-            <tag> linux </tag>
             
         </tags>
         
